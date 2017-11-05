@@ -25,6 +25,10 @@ char Tape::get_current() const {
     return current->value;
 }
 
+void Tape::write(char value) {
+    current->value = value;
+}
+
 void Tape::move_right() {
     if (current->next == nullptr) {
         Node* node = create_node();
