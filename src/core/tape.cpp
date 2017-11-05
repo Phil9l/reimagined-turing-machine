@@ -13,6 +13,15 @@ Tape::Tape() {
     current = head;    
 }
 
+Tape::Tape(std::vector<char> input) {
+    Tape();
+    for (char value : input) {
+        write(value);
+        move_right();
+    }
+    current = head;
+}
+
 Tape::~Tape() {
     while (head) {
         current = head;

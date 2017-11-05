@@ -1,3 +1,5 @@
+#include <vector>
+
 struct Node {
     Node* next;
     Node* prev;
@@ -10,6 +12,7 @@ class Tape {
     Node* current;
  public:
     Tape();
+    Tape(std::vector<char> input);
     ~Tape();
     char get_current() const;
     void move_right();
